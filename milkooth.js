@@ -32,13 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrub: true,
                 markers: true,
                 onUpdate: (self) => {
-                    // Log ScrollTrigger updates (optional, you can remove this)
-                    console.log("ScrollTrigger update:", self.progress);
                 }
             },
         });
-
-        // Log GSAP animation (optional, you can remove this)
-        console.log("GSAP animation created:", scrubAnimation);
     };
 });
