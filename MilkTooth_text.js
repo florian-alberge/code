@@ -87,5 +87,6 @@ window.addEventListener("DOMContentLoaded", (event) => {
           .to($(this).find(".word"), { opacity: 0.7, duration: 0 });
     });
   
-    // Removed: gsap.set("[text-split]", { opacity: 1 });
+    // Avoid flash of unstyled content
+    gsap.set("[text-split]", { opacity: 0.7 });
 });
