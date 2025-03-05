@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: triggerElement,
       start: "top bottom",
-      onLeaveBack: () => {
+      onLeaveBack: () => timeline.reverse()
         timeline.progress(0);
         timeline.pause();
       }
