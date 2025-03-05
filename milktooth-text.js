@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     });
     // Play tl when scrolled into view (60% from top of screen)
     ScrollTrigger.create({
-      trigger: triggerElement,
+      trigger: (this),
       start: "top 60%",
       onEnter: () => timeline.play()
       onLeaveBack: () => timeline.reverse()
