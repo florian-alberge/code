@@ -1,10 +1,3 @@
-<video id="transparentVideo" playsinline loop muted autoplay data-wf-ignore="true" data-object-fit="cover">
-  <source src="your-cdn-link/background-video-webm.webm" type="video/webm">
-  <source src="your-cdn-link/background-video-fallback.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-<script>
   document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('transparentVideo');
     const webmSource = "your-cdn-link/background-video-webm.webm";
