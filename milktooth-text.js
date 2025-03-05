@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: triggerElement,
       start: "top bottom",
-      onLeaveBack: () => timeline.reverse()
+      onLeaveBack: () => tl.reverse()
         timeline.progress(0);
         timeline.pause();
       }
@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: triggerElement,
       start: "top 60%",
-      onEnter: () => timeline.play()
+      onEnter: () => tl.play()
     });
   }
 
