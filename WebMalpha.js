@@ -1,6 +1,6 @@
   document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('transparentVideo');
-    const webmSource = "your-cdn-link/background-video-webm.webm";
+    const video = document.getElementById('MilkTooth_hero');
+    const webmSource = "https://cdn.jsdelivr.net/gh/florian-alberge/Videos@main/Milk%20Tooth_Title-vp9-chrome.webm";
     const mp4Source = "your-cdn-link/background-video-fallback.mp4";
 
     function supportsWebMAlpha() {
