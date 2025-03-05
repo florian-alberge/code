@@ -26,7 +26,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
   $("[words-slide-up]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
-    tl.from($(this).find(".word"), { opacity: 0, yPercent: 100, duration: 1, ease: "back.out(2)", stagger: { amount: 0.5 } });
+    tl.from($(this).find(".word"), { opacity: 0.3, yPercent: 100, duration: 1, ease: "back.out(2)", stagger: { amount: 0.5 } });
     createScrollTrigger($(this), tl);
   });
 
@@ -34,36 +34,39 @@ window.addEventListener("DOMContentLoaded", (event) => {
     let tl = gsap.timeline({ paused: true });
     tl.set($(this).find(".word"), { transformPerspective: 1000 });
     tl.from($(this).find(".word"), { rotationX: -90, duration: 0.6, ease: "power2.out", stagger: { amount: 0.6 } });
+      .to($(this).find(".word"), { opacity: 0.7, ... });
     createScrollTrigger($(this), tl);
   });
 
   $("[words-slide-from-right]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
-    tl.from($(this).find(".word"), { opacity: 0, x: "1em", duration: 0.6, ease: "power2.out", stagger: { amount: 0.2 } });
+    tl.from($(this).find(".word"), { opacity: 0.3, x: "1em", duration: 0.6, ease: "power2.out", stagger: { amount: 0.2 } });
     createScrollTrigger($(this), tl);
   });
 
   $("[letters-slide-up]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
     tl.from($(this).find(".char"), { yPercent: 100, duration: 0.2, ease: "power1.out", stagger: { amount: 0.6 } });
+      .to($(this).find(".word"), { opacity: 0.7, ... });
     createScrollTrigger($(this), tl);
   });
 
   $("[letters-slide-down]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
     tl.from($(this).find(".char"), { yPercent: -120, duration: 0.3, ease: "power1.out", stagger: { amount: 0.7 } });
+      .to($(this).find(".word"), { opacity: 0.7, ... });
     createScrollTrigger($(this), tl);
   });
 
   $("[letters-fade-in]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
-    tl.from($(this).find(".char"), { opacity: 0, duration: 0.2, ease: "power1.out", stagger: { amount: 0.8 } });
+    tl.from($(this).find(".char"), { opacity: 0.3, duration: 0.2, ease: "power1.out", stagger: { amount: 0.8 } });
     createScrollTrigger($(this), tl);
   });
 
   $("[letters-fade-in-random]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
-    tl.from($(this).find(".char"), { opacity: 0, duration: 0.05, ease: "power1.out", stagger: { amount: 0.4, from: "random" } });
+    tl.from($(this).find(".char"), { opacity: 0.3, duration: 0.05, ease: "power1.out", stagger: { amount: 0.4, from: "random" } });
     createScrollTrigger($(this), tl);
   });
 
@@ -76,9 +79,9 @@ window.addEventListener("DOMContentLoaded", (event) => {
         scrub: true
       }
     });
-    tl.from($(this).find(".word"), { opacity: 0.2, duration: 0.2, ease: "power1.out", stagger: { each: 0.4 } });
+    tl.from($(this).find(".word"), { opacity: 0.5, duration: 0.2, ease: "power1.out", stagger: { each: 0.4 } });
   });
 
   // Avoid flash of unstyled content
-  gsap.set("[text-split]", { opacity: 0.7 });
+  gsap.set("[text-split]", { opacity: 1 });
 });
