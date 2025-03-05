@@ -1,15 +1,10 @@
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
-
-<script>
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
     // Initialize Lenis
     const lenis = new Lenis();
    
-    // Log Lenis initialization
+    // Log Lenis initialization (optional, you can remove this)
     console.log("Lenis initialized:", lenis);
 
     // Synchronize Lenis with ScrollTrigger
@@ -37,14 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 scrub: true,
                 markers: true,
                 onUpdate: (self) => {
-                    // Log ScrollTrigger updates
+                    // Log ScrollTrigger updates (optional, you can remove this)
                     console.log("ScrollTrigger update:", self.progress);
                 }
             },
         });
 
-        // Log GSAP animation
+        // Log GSAP animation (optional, you can remove this)
         console.log("GSAP animation created:", scrubAnimation);
     };
 });
-</script>
