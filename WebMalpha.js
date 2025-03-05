@@ -1,7 +1,7 @@
   document.addEventListener('DOMContentLoaded', function() {
     const video = document.getElementById('MilkTooth_hero');
     const webmSource = "https://cdn.jsdelivr.net/gh/florian-alberge/Videos@main/Milk%20Tooth_Title-vp9-chrome.webm";
-    const mp4Source = "your-cdn-link/background-video-fallback.mp4";
+    const mp4Source = "https://cdn.jsdelivr.net/gh/florian-alberge/Videos@main/Milk%20Tooth_Title.mp4";
 
     function supportsWebMAlpha() {
       const video = document.createElement('video');
