@@ -23,6 +23,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
       onEnter: () => timeline.play()
       onLeaveBack: () => timeline.reverse()
     });
+  });
+});
   }
 
   $("[words-slide-up]").each(function (index) {
