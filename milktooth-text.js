@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: triggerElement,
       start: "top bottom",
-      onLeaveBack: () => {
+      onLeaveBack: () => tl.reverse()
         timeline.progress(0);
         timeline.pause();
       }
@@ -20,11 +20,8 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: (this),
       start: "top 60%",
-      onEnter: () => timeline.play()
-      onLeaveBack: () => timeline.reverse()
+      onEnter: () => tl.play()
     });
-  });
-});
   }
 
   $("[words-slide-up]").each(function (index) {
