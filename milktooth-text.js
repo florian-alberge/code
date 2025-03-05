@@ -80,5 +80,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // Avoid flash of unstyled content
-  gsap.set("[text-split]", { opacity: 1 });
+  gsap.set("[text-split]", { opacity: 0.7 });
 });
