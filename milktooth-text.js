@@ -86,7 +86,5 @@ window.addEventListener("DOMContentLoaded", (event) => {
         tl.from($(this).find(".word"), { opacity: 0, duration: 0.2, ease: "power1.out", stagger: { each: 0.4 } })
           .to($(this).find(".word"), { opacity: 0.7, duration: 0 });
     });
-
-    // Avoid flash of unstyled content
-    gsap.set("[text-split]", { opacity: 1 });
+        // Removed: gsap.set("[text-split]", { opacity: 1 });
 });
