@@ -11,22 +11,22 @@ window.addEventListener("DOMContentLoaded", (event) => {
     ScrollTrigger.create({
       trigger: triggerElement,
       start: "top bottom",
-      onLeaveBack: () => tl.reverse()
+      onLeaveBack: () => {
         timeline.progress(0);
         timeline.pause();
       }
     });
     // Play tl when scrolled into view (60% from top of screen)
     ScrollTrigger.create({
-      trigger: (this),
+      trigger: triggerElement,
       start: "top 60%",
-      onEnter: () => tl.play()
+      onEnter: () => timeline.play()
     });
   }
 
   $("[words-slide-up]").each(function (index) {
     let tl = gsap.timeline({ paused: true });
-    tl.from($(this).find(".word"), { opacity: 0, yPercent: 100, duration: 1, ease: "back.out(2)", stagger: { amount: 0.5 } });
+    tl.from($(this).find(".word"), { opacity: 0, yPercent: 100, duration: 0.5, ease: "back.out(2)", stagger: { amount: 0.5 } });
     createScrollTrigger($(this), tl);
   });
 
