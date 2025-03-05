@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function createScrollTrigger(triggerElement, timeline) {
         // Reset tl when scroll out of view past bottom of screen
         ScrollTrigger.create({
-            trigger: triggerElement,
+            trigger: $(this),
             start: "top bottom",
             onLeaveBack: () => {
                 timeline.progress(0);
@@ -18,7 +18,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         });
         // Play tl when scrolled into view (60% from top of screen)
         ScrollTrigger.create({
-            trigger: triggerElement,
+            trigger: $(this),
             start: "top 60%",
             onEnter: () => timeline.play()
         });
