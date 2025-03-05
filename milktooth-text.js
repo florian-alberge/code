@@ -21,6 +21,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
       trigger: triggerElement,
       start: "top 60%",
       onEnter: () => timeline.play()
+      onLeave: () => timeline.reverse()
     });
   }
 
